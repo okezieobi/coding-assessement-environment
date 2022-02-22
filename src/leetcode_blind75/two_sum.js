@@ -14,4 +14,5 @@ function twoSums(nums = [], target = 0) {
     .filter((val) => val !== -1);
 }
 
+// eslint-disable-next-line no-console
 console.log(twoSums([3, 2, 4], 6));

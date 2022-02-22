@@ -10,4 +10,5 @@ function sumOfTwoInteger(a, b) {
   return placeholderA;
 }
 
+// eslint-disable-next-line no-console
 console.log(sumOfTwoInteger(2, 3));
