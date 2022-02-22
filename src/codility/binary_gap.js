@@ -1,6 +1,5 @@
 function findLongestBinaryGap(N) {
   if (typeof N !== 'number' || /^\+?\d+$/.test(`${N}`) === false) throw new TypeError('Argument must be positive integer');
-  else if (N < 1 || N > 647) throw new RangeError('Argument must be within 1 to 647');
   const binary = (N).toString(2);
   const arrayResult = [];
   let count = 0;

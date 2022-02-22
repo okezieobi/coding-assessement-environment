@@ -5,5 +5,5 @@
     "checkJs": true
   },
   "exclude": ["node_modules", "**/node_modules/*"],
-  "include": ["src/**/*", "src/binary_gap.js"]
+  "include": ["src/**/*", "src/codility/binary_gap.js"]
 }
