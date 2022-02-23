@@ -24,13 +24,21 @@ function twoSums(nums = [], target = 0) {
   // }
   // return result;
 
+  // const hash = {};
+  // let result;
+  // for (let index = 0; index < nums.length; index += 1) {
+  //   const prop = nums[index];
+  //   if (hash[prop]) result = [+hash[prop], index];
+  //   else hash[target - prop] = `${index}`;
+  // }
+  // return result;
+
   const hash = {};
   let result;
-  for (let index = 0; index < nums.length; index += 1) {
-    const prop = nums[index];
-    if (hash[prop]) result = [+hash[prop], index];
-    else hash[target - prop] = `${index}`;
-  }
+  nums.forEach((value, index) => {
+    if (hash[value]) result = [+hash[value], index];
+    else hash[target - value] = `${index}`;
+  });
   return result;
 }
 
