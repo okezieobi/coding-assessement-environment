@@ -8,10 +8,30 @@ function twoSums(nums = [], target = 0) {
   // });
   // return result;
 
-  return nums
-    .map((value, index, array) => array
-      .findIndex((val, ind) => val + value === target && index !== ind))
-    .filter((val) => val !== -1);
+  // return nums
+  //   .map((value, index, array) => array
+  //     .findIndex((val, ind) => val + value === target && index !== ind))
+  //   .filter((val) => val !== -1);
+
+  // const result = [];
+  // for (let index = 0; index < nums.length; index += 1) {
+  //   for (let ind = 0; ind < nums.length; ind += 1) {
+  //     if (nums[index] + nums[ind] === target && index !== ind) {
+  //       if (result.length === 2) break;
+  //       else result.push(index, ind);
+  //     }
+  //   }
+  // }
+  // return result;
+
+  const hash = {};
+  let result;
+  for (let index = 0; index < nums.length; index += 1) {
+    const prop = nums[index];
+    if (hash[prop]) result = [+hash[prop], index];
+    else hash[target - prop] = `${index}`;
+  }
+  return result;
 }
 
 // eslint-disable-next-line no-console
