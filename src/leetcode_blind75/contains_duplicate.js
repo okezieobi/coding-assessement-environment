@@ -24,14 +24,15 @@ Constraints:
  * @param {number[]} nums
  * @return {boolean}
  */
-const containsDuplicate = function (nums) {
+// eslint-disable-next-line no-unused-vars
+const containsDuplicate = (nums) => {
   const test = {};
   let result = false;
   nums.forEach((val) => {
-    if (test[`${val}`] === val) {
+    if (test[val]) {
       result = true;
     } else {
-      test[`${val}`] = val;
+      test[val] = true;
     }
   });
   return result;
