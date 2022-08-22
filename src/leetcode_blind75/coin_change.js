@@ -35,7 +35,6 @@ function coinChange(coinArray = [], amt = 0) {
     if (amount === 0) return 0;
     let placeholderAmt = amount;
     const maxCoinAmt = Math.max(...coins);
-    console.log(placeholderAmt, maxCoinAmt);
     while (placeholderAmt >= maxCoinAmt) {
       placeholderAmt -= maxCoinAmt;
       fewestNoOfCoins += 1;
@@ -45,7 +44,6 @@ function coinChange(coinArray = [], amt = 0) {
       if (remainder.length === 0) {
         fewestNoOfCoins = -1;
       } else {
-        console.log(fewestNoOfCoins);
         coinChangeRunner(remainder, placeholderAmt);
       }
     }
